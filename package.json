@@ -15,7 +15,7 @@
   "scripts": {
     "development": "nodemon",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "node ./dist/server.generated.js"
+    "start": "node ./server/server.js"
   },
   "engines": {
     "node": "15.7.0",
