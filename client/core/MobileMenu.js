@@ -11,6 +11,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useHistory } from "react-router-dom";
+import {isMobile} from 'react-device-detect';
 
 const useStyles = makeStyles(theme => ({
     title: {
@@ -69,47 +70,52 @@ export default function MobileMenu() {
         setAnchorEl(null);
     };
 
-    return (
-        <AppBar position="static">
-            <Toolbar>
-                <Typography variant="h6" color="secondary" className={classes.title}>
-                    Afillio
-                </Typography>
-                <div style={{'position':'absolute', 'right': '1em'}}><span style={{'float': 'right'}}>
-                    <Button
-                        aria-controls="customized-menu"
-                        aria-haspopup="true"
-                        onClick={handleClick}
-                    >
-                        <MenuIcon fontSize="large" color="secondary"/>
-                    </Button>
-                    <StyledMenu
-                        id="customized-menu"
-                        anchorEl={anchorEl}
-                        keepMounted
-                        open={Boolean(anchorEl)}
-                        onClose={handleClose}
-                    >
-                        {
-                            !auth.isAuthenticated() && (<div>
+    if (isMobile) {
+        return (
+            <AppBar position="static">
+                <Toolbar>
+                    <Typography variant="h6" color="secondary" className={classes.title}>
+                        Afillio
+                    </Typography>
+                    <div style={{'position':'absolute', 'right': '1em'}}><span style={{'float': 'right'}}>
+                        <Button
+                            aria-controls="customized-menu"
+                            aria-haspopup="true"
+                            onClick={handleClick}
+                        >
+                            <MenuIcon fontSize="large" color="secondary"/>
+                        </Button>
+                        <StyledMenu
+                            id="customized-menu"
+                            anchorEl={anchorEl}
+                            keepMounted
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                        >
+                            {
+                                !auth.isAuthenticated() && (<div>
+                                    <StyledMenuItem>
+                                        <ListItemText primary="Sign up" onClick={() => routeChange(history, "/signup")}/>
+                                    </StyledMenuItem>
+                                    <StyledMenuItem>
+                                        <ListItemText primary="Sign in" onClick={() => routeChange(history, "/signin")}/>
+                                    </StyledMenuItem>
+                                    </div>)
+                            }
+                            {
+                                auth.isAuthenticated() && (<div>
                                 <StyledMenuItem>
-                                    <ListItemText primary="Sign up" onClick={() => routeChange(history, "/signup")}/>
-                                </StyledMenuItem>
-                                <StyledMenuItem>
-                                    <ListItemText primary="Sign in" onClick={() => routeChange(history, "/signin")}/>
+                                        <ListItemText primary="Sign out" onClick={() => {auth.clearJWT(() => history.push('/'))}}/>
                                 </StyledMenuItem>
                                 </div>)
-                        }
-                        {
-                            auth.isAuthenticated() && (<div>
-                            <StyledMenuItem>
-                                    <ListItemText primary="Sign out" onClick={() => {auth.clearJWT(() => history.push('/'))}}/>
-                            </StyledMenuItem>
-                            </div>)
-                        }
-                    </StyledMenu>
-                </span></div>
-            </Toolbar>
-        </AppBar>
-    );
+                            }
+                        </StyledMenu>
+                    </span></div>
+                </Toolbar>
+            </AppBar>
+        );
+    }
+    else {
+        return (<></>)
+    }
 }

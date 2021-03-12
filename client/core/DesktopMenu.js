@@ -10,6 +10,7 @@ import {Link, withRouter} from 'react-router-dom'
 import CartIcon from '@material-ui/icons/ShoppingCart'
 import Badge from '@material-ui/core/Badge'
 import list from './../list/list-helper'
+import {isMobile} from 'react-device-detect';
 
 const isActive = (history, path) => {
   if (history.location.pathname == path)
@@ -23,6 +24,7 @@ const isPartActive = (history, path) => {
   else
     return {color: '#ffffff'}
 }
+
 const DesktopMenu = withRouter(({history}) => (
   <AppBar position="static">
     <Toolbar>
@@ -89,5 +91,11 @@ const DesktopMenu = withRouter(({history}) => (
     </Toolbar>
   </AppBar>
 ))
+
+if (isMobile) {
+  DesktopMenu = () => (
+  <></>
+  )
+}
 
 export default DesktopMenu
