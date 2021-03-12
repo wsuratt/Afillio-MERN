@@ -28,10 +28,18 @@ import Cart from './cart/Cart'
 import StripeConnect from './user/StripeConnect'
 import ShopOrders from './order/ShopOrders'
 import Order from './order/Order'
+import DesktopMenu from './DesktopMenu'
+import MobileMenu from './MobileMenu'
+import {BrowserView, MobileView} from "react-device-detect";
 
 const MainRouter = () => {
   return (<div>
-      <Menu/>
+      <BrowserView>
+        <DesktopMenu/>
+      </BrowserView>
+      <MobileView>
+        <MobileMenu/>
+      </MobileView>
       <Switch>
         <Route exact path="/" component={Home}/>
         <PrivateAdminRoute path="/users" component={Users}/>
