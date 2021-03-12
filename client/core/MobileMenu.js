@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 const StyledMenu = withStyles({
     paper: {
-        border: '1px solid #d3d4d5',
+        border: '1em solid #d3d4d5',
     },
 })((props) => (
     <Menu
@@ -75,7 +75,7 @@ export default function MobileMenu() {
                 <Typography variant="h6" color="secondary" className={classes.title}>
                     Afillio
                 </Typography>
-                <div style={{'position':'absolute', 'right': '10px'}}><span style={{'float': 'right'}}>
+                <div style={{'position':'absolute', 'right': '1em'}}><span style={{'float': 'right'}}>
                     <Button
                         aria-controls="customized-menu"
                         aria-haspopup="true"
