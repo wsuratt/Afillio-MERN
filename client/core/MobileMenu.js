@@ -14,6 +14,7 @@ import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     title: {
+        display: "block",
         flexGrow: 1,
         textAlign: "center",
         fontSize: "x-large"
