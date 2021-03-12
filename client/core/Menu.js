@@ -4,17 +4,15 @@ import {isMobile} from 'react-device-detect';
 import DesktopMenu from './DesktopMenu'
 import MobileMenu from './MobileMenu'
 
-const isApp = isMobile
-
-const Menu = () => (
-  <div>
-    if (isApp) {
-      <MobileMenu/>
-    }
-    else {
-      <DesktopMenu/>
-    }
-  </div>
-)
-
-export default Menu
+if (isMobile) {
+  const Menu = () => (
+    <MobileMenu/>
+  )
+  export default Menu
+}
+else {
+  const Menu = () => (
+    <DesktopMenu/>
+  )
+  export default Menu
+}
