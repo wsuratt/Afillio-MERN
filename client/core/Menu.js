@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu'
 const Menu = () => (
   <div>
     <BrowserView>
-      <DesktopMenu/>
+      <MobileMenu/>
     </BrowserView>
     <MobileView>
       <MobileMenu/>
