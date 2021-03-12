@@ -7,11 +7,11 @@ import MobileMenu from './MobileMenu'
 const Menu = () => {
   if(isMobile) {
     return (
-        <div><MobileMenu/></div>
+        <div><DesktopMenu/></div>
     )
   }
   return (
-      <div><DesktopMenu/></div>
+      <div><MobileMenu/></div>
   );
   
 }
