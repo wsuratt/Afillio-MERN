@@ -5,15 +5,14 @@ import DesktopMenu from './DesktopMenu'
 import MobileMenu from './MobileMenu'
 
 const Menu = () => {
-  if(isMobile) {
+  if(!isMobile) {
     return (
-        <div><MobileMenu/></div>
+        <div><DesktopMenu/></div>
     )
   }
   return (
       <div><MobileMenu/></div>
   );
-  
 }
 
 export default Menu
