@@ -113,7 +113,7 @@ export default function Product ({match}) {
         <div className={classes.root}>
           {auth.isAuthenticated() ?
             <Grid container spacing={10}>
-              <Grid item xs={7} sm={7}>
+              <Grid item xs={12} sm={12}>
                 <Card className={classes.card}>
                   <CardHeader
                     title={product.name}
@@ -135,8 +135,8 @@ export default function Product ({match}) {
                       </Link>
                     </Typography>
                   </div>
-                  <span className={classes.bottom}><QRCode value={'http://localhost:3000/buy/'+product._id+'/'+auth.isAuthenticated().user._id}/></span>
-                  <span className={classes.bottom}><Typography className={classes.link}>{'http://localhost:3000/buy/'+product._id+'/'+auth.isAuthenticated().user._id}</Typography></span>
+                  <span className={classes.bottom}><QRCode value={'https://afillio.herokuapp.com/buy/'+product._id+'/'+auth.isAuthenticated().user._id}/></span>
+                  <span className={classes.bottom}><Typography className={classes.link}>{'https://afillio.herokuapp.com/buy/'+product._id+'/'+auth.isAuthenticated().user._id}</Typography></span>
                 </Card>
               </Grid>
               {suggestions.length > 0 &&
