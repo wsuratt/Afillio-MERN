@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   },
   link:{
     color: '#3e4c54b3',
-    fontSize: '0.9em'
+    fontSize: '0.5em'
   },
   addCart: {
     width: '35px',
