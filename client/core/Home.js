@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Home(){
   const classes = useStyles()
-  const [suggestionTitle, setSuggestionTitle] = useState("Latest Products")
+  // const [suggestionTitle, setSuggestionTitle] = useState("Latest Products")
   const [categories, setCategories] = useState([])
   const [suggestions, setSuggestions] = useState([])
   
@@ -53,13 +53,13 @@ export default function Home(){
     return (
       <div className={classes.root}>
         <Grid container spacing={2}>
-          <Grid item xs={8} sm={8}>
+          <Grid item xs sm>
             <Search categories={categories}/>
             <Categories categories={categories}/>
           </Grid>
-          <Grid item xs={4} sm={4}>
+          {/* <Grid item xs={4} sm={4}>
             <Suggestions products={suggestions} title={suggestionTitle}/>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
     )
