@@ -23,12 +23,12 @@ export default function Cart () {
 
     return (<div className={classes.root}>
       <Grid container spacing={8}>
-        <Grid item xs={6} sm={6}>
+        <Grid item xs={10} sm={10}>
           <CartItems checkout={checkout}
                      setCheckout={showCheckout}/>
         </Grid>
         {checkout &&
-          <Grid item xs={6} sm={6}>
+          <Grid item xs={10} sm={10}>
             <StripeProvider apiKey={config.stripe_test_api_key}>
               <Checkout/>
             </StripeProvider>
