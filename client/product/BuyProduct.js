@@ -109,7 +109,7 @@ export default function Product ({match}) {
     return (
         <div className={classes.root}>
           <Grid container spacing={10}>
-            <Grid item xs={12} sm={12}>
+            <Grid item xs sm>
               <Card className={classes.card}>
                 <CardHeader
                   title={product.name}
