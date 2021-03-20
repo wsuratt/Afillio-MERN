@@ -13,13 +13,13 @@ import list from './../list/list-helper'
 
 const isActive = (history, path) => {
   if (history.location.pathname == path)
-    return {color: '#487554'}
+    return {color: '#e6e6e6'}
   else
     return {color: '#ffffff'}
 }
 const isPartActive = (history, path) => {
   if (history.location.pathname.includes(path))
-    return {color: '#487554'}
+    return {color: '#e6e6e6'}
   else
     return {color: '#ffffff'}
 }
