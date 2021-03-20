@@ -60,13 +60,13 @@ export default function Products(props){
       <div className={classes.root}>
       {props.products.length > 0 ?
         (<div className={classes.container}>
-          <GridList cellHeight={200} className={classes.gridList} cols={3}>
+          <GridList cellHeight={200} className={classes.gridList} cols={2}>
           {props.products.map((product, i) => (
             <GridListTile key={i} className={classes.tile}>
               <Link to={"/product/"+product._id}><img className={classes.image} src={'/api/product/image/'+product._id} alt={product.name} /></Link>
               <GridListTileBar className={classes.tileBar}
                 title={<Link to={"/product/"+product._id} className={classes.tileTitle}>{product.name}</Link>}
-                subtitle={<span>Price: $ {product.price}<br/>Commission: $ {product.commission}</span>}
+                subtitle={<span>Sell for: $ {product.price}<br/>Make: $ {product.commission}</span>}
                 actionIcon={
                   <AddToList item={product}/>
                 }
