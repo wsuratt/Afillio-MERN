@@ -16,7 +16,7 @@ const theme = createMuiTheme({
       contrastText: '#000',
     },
       openTitle: blueGrey['400'],
-      protectedTitle: lightGreen['400'],
+      protectedTitle: '#90d4a2',
       type: 'light'
     },
     breakpoints: {

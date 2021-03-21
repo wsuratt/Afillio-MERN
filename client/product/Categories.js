@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '0.9em'
   },
   link: {
-    color: '#4d6538',
+    color: '#000000',
     textShadow: '0px 2px 12px #ffffff',
     cursor:'pointer'
   }
