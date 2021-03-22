@@ -62,6 +62,8 @@ export default function EditProduct ({match}) {
       category: '',
       quantity: '',
       price: '',
+      // commissionType: 'fixed',
+      commission: '',
       redirect: false,
       error: ''
     })
@@ -91,6 +93,8 @@ export default function EditProduct ({match}) {
     values.category && productData.append('category', values.category)
     values.quantity && productData.append('quantity', values.quantity)
     values.price && productData.append('price', values.price)
+    // values.commissionType && productData.append('commissionType', values.commissionType)
+    values.commission && productData.append('commission', values.commission)
   
     update({
       shopId: match.params.shopId,
@@ -145,6 +149,14 @@ export default function EditProduct ({match}) {
           <TextField id="category" label="Category" className={classes.textField} value={values.category} onChange={handleChange('category')} margin="normal"/><br/>
           <TextField id="quantity" label="Quantity" className={classes.textField} value={values.quantity} onChange={handleChange('quantity')} type="number" margin="normal"/><br/>
           <TextField id="price" label="Price" className={classes.textField} value={values.price} onChange={handleChange('price')} type="number" margin="normal"/><br/>
+          {/* <FormControl component="fieldset">
+            <FormLabel component="legend">Commission Type</FormLabel>
+            <RadioGroup id="commissionType" value={values.commissionType} onChange={handleChange('commissionType')}>
+              <FormControlLabel value="fixed" control={<Radio />} label="Fixed" />
+              <FormControlLabel value="percentage" control={<Radio />} label="Percentage" />
+            </RadioGroup>
+          </FormControl><br/> */}
+          <TextField id="commission" label="Commission" className={classes.textField} value={values.commission} onChange={handleChange('commission')} type="number" margin="normal"/><br/>
           {
             values.error && (<Typography component="p" color="error">
               <Icon color="error" className={classes.error}>error</Icon>

@@ -139,10 +139,10 @@ export default function Product ({match}) {
                   <span className={classes.bottom}><Typography className={classes.link}>{'https://afillio.herokuapp.com/buy/'+product._id+'/'+auth.isAuthenticated().user._id}</Typography></span>
                 </Card>
               </Grid>
-              {suggestions.length > 0 &&
+              {/* {suggestions.length > 0 &&
                 (<Grid item xs={5} sm={5}>
                   <Suggestions  products={suggestions} title='Related Products'/>
-                </Grid>)}
+                </Grid>)} */}
             </Grid>
             : (<Typography variant="subheading" component="h4">Sign in to sell product.</Typography>)}
         </div>)
