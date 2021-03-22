@@ -78,7 +78,7 @@ export default function EditProduct ({match}) {
         if (data.error) {
           setValues({...values, error: data.error})
         } else {
-          setValues({...values, id: data._id, name: data.name, description: data.description, category: data.category, quantity:data.quantity, price: data.price})
+          setValues({...values, id: data._id, name: data.name, description: data.description, category: data.category, quantity:data.quantity, price: data.price, commision: data.commision})
         }
       })
     return function cleanup(){
