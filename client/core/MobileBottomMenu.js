@@ -6,6 +6,7 @@ import IconButton from '@material-ui/core/IconButton'
 import HomeIcon from '@material-ui/icons/Home'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import StorefrontIcon from '@material-ui/icons/Storefront';
+import ListAltIcon from '@material-ui/icons/ListAlt';
 import Grid from '@material-ui/core/Grid';
 import {Link, withRouter} from 'react-router-dom'
 
@@ -36,6 +37,13 @@ const MobileBottomMenu = withRouter(({history}) => (
                     <Link to="/shops/all">
                         <IconButton aria-label="Shop" style={isActive(history, "/shops/all")}>
                             <StorefrontIcon/>
+                        </IconButton>
+                    </Link>
+                </Grid>
+                <Grid item>
+                    <Link to="/list">
+                        <IconButton aria-label="Shop" style={isActive(history, "/list")}>
+                            <ListAltIcon/>
                         </IconButton>
                     </Link>
                 </Grid>

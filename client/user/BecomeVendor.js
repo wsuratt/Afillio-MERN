@@ -34,6 +34,13 @@ const useStyles = makeStyles(theme => ({
   },
   details: {
     padding: '24px'
+  },
+  bottom: {
+    display: 'flex',
+    padding: '10px 12px',
+    borderRadius: '0.25em',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 }))
 export default function BecomeVendor(){
@@ -70,11 +77,11 @@ export default function BecomeVendor(){
         <Typography type="title" className={classes.title}>
           Become a Vendor
         </Typography>
-        <Link to={"/vendor/register/" + user._id}>
-            <Button>
+        <span className={classes.bottom}><Link to={"/vendor/register/" + user._id}>
+            <Button style={{backgroundColor: '#90d4a2'}} color="secondary">
               Become a Vendor
             </Button>
-        </Link>
+        </Link></span>
       </Paper>
     </div>)
 }

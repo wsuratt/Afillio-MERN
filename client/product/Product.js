@@ -10,6 +10,7 @@ import {read, listRelated} from './api-product.js'
 import {Link} from 'react-router-dom'
 import Suggestions from './../product/Suggestions'
 import auth from './../auth/auth-helper'
+import Button from '@material-ui/core/Button'
 import QRCode from 'qrcode.react'
 
 const useStyles = makeStyles(theme => ({
@@ -136,7 +137,11 @@ export default function Product ({match}) {
                     </Typography>
                   </div>
                   <span className={classes.bottom}><QRCode value={'https://afillio.herokuapp.com/buy/'+product._id+'/'+auth.isAuthenticated().user._id}/></span>
-                  <span className={classes.bottom}><Typography className={classes.link}>{'https://afillio.herokuapp.com/buy/'+product._id+'/'+auth.isAuthenticated().user._id}</Typography></span>
+                  {/* <span className={classes.bottom}><Typography className={classes.link}>{'https://afillio.herokuapp.com/buy/'+product._id+'/'+auth.isAuthenticated().user._id}</Typography></span> */}
+                  <span className={classes.bottom}>
+                    <Button color="secondary" style={{backgroundColor: '#90d4a2'}} 
+                      onClick={() => {navigator.clipboard.writeText('https://afillio.herokuapp.com/buy/'+product._id+'/'+auth.isAuthenticated().user._id)}}>
+                      Copy Link</Button></span>
                 </Card>
               </Grid>
               {/* {suggestions.length > 0 &&

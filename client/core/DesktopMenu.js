@@ -7,7 +7,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import Button from '@material-ui/core/Button'
 import auth from './../auth/auth-helper'
 import {Link, withRouter} from 'react-router-dom'
-import CartIcon from '@material-ui/icons/ShoppingCart'
+import ListAltIcon from '@material-ui/icons/ListAlt';
 import Badge from '@material-ui/core/Badge'
 import list from './../list/list-helper'
 
@@ -45,7 +45,7 @@ const DesktopMenu = withRouter(({history}) => (
           <Button style={isActive(history, "/list")}>
             List
             <Badge invisible={false} color="secondary" badgeContent={list.itemTotal()} style={{'marginLeft': '7px'}}>
-              <CartIcon />
+              <ListAltIcon />
             </Badge>
           </Button>
         </Link>      
