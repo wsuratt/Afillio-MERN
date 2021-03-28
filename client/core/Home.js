@@ -61,6 +61,7 @@ export default function Home(){
             <Suggestions products={suggestions} title={suggestionTitle}/>
           </Grid> */}
         </Grid>
+        <p><br/><br/><br/><br/></p>
       </div>
     )
 }

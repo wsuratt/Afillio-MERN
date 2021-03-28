@@ -145,5 +145,6 @@ export default function ListItems () {
       </span>) :
       <Typography variant="subtitle1" component="h3" color="primary">No items added to your list.</Typography>
     }
+    <p><br/></p>
     </Card>)
 }

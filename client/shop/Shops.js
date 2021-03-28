@@ -86,5 +86,6 @@ export default function Shops(){
             </Link>})}
         </List>
       </Paper>
+      <p><br/><br/><br/></p>
     </div>)
 }
