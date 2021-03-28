@@ -19,7 +19,7 @@ const isActive = (history, path) => {
 }
 
 const MobileBottomMenu = withRouter(({history}) => (
-    <AppBar color="secondary" style={{top: 'auto', bottom: 0}}>
+    <AppBar color="secondary" style={{top: 'auto', bottom: 0, height: 75}}>
         <Toolbar>
             <Grid
                 justify="space-between"

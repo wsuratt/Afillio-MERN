@@ -62,7 +62,7 @@ const MainRouter = () => {
 
         <Route path="/vendor/stripe/connect" component={StripeConnect}/>
       </Switch>
-      <BottomMenu position="sticky"/>
+      <BottomMenu/>
     </div>)
 }
 
