@@ -19,7 +19,7 @@ const isActive = (history, path) => {
 }
 
 const MobileBottomMenu = withRouter(({history}) => (
-    <AppBar position="fixed" color="secondary" style={{top: 'auto', bottom: 0}}>
+    <AppBar color="secondary" style={{top: 'auto', bottom: 0}}>
         <Toolbar>
             <Grid
                 justify="space-between"
@@ -42,7 +42,7 @@ const MobileBottomMenu = withRouter(({history}) => (
                 </Grid>
                 <Grid item>
                     <Link to="/list">
-                        <IconButton aria-label="Shop" style={isActive(history, "/list")}>
+                        <IconButton aria-label="List" style={isActive(history, "/list")}>
                             <ListAltIcon/>
                         </IconButton>
                     </Link>
