@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid'
 import {read} from './api-shop.js'
 import Products from './../product/Products'
 import {listByShop} from './../product/api-product.js'
+import Divider from '@material-ui/core/Divider'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -99,7 +100,7 @@ export default function Shop({match}) {
           : '/api/shops/defaultphoto'
     return (<div className={classes.root}>
       <Grid container spacing={8}>
-        <Grid item xs={4} sm={4}>
+        <Grid item xs sm>
           <Card className={classes.card}>
             <CardContent>
               <Typography type="headline" component="h2" className={classes.title}>
@@ -112,13 +113,13 @@ export default function Shop({match}) {
                 </Typography><br/>
             </CardContent>
           </Card>
-        </Grid>
-        <Grid item xs={8} sm={8}>
+          <Divider/>
           <Card>
             <Typography type="title" component="h2" className={classes.productTitle}>Products</Typography>
             <Products products={products} searched={false}/>
           </Card>
         </Grid>
       </Grid>
+      <p><br/><br/><br/><br/></p>
     </div>)
 }
