@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     margin: 30,
   },
   flex:{
-    display:'flex'
+    display:'flex',
   },
   card: {
     padding:'24px 40px 40px'
@@ -39,8 +39,7 @@ const useStyles = makeStyles(theme => ({
   media: {
     height: 200,
     display: 'inline-block',
-    width: '50%',
-    marginLeft: '24px'
+    width: 200,
   },
   icon: {
     verticalAlign: 'sub'
