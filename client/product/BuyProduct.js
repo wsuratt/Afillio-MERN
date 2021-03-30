@@ -37,7 +37,11 @@ const useStyles = makeStyles(theme => ({
     height: 200,
     display: 'inline-block',
     width: '50%',
-    marginLeft: '24px'
+    marginLeft: '24px',
+    [theme.breakpoints.up('desktop')]: {
+      width: 200,
+      marginLeft: '35%',
+    },
   },
   icon: {
     verticalAlign: 'sub'
