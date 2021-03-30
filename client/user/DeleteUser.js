@@ -55,7 +55,7 @@ export default function DeleteUser(props) {
           <Button onClick={handleRequestClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={deleteAccount} color="secondary" autoFocus="autoFocus">
+          <Button onClick={deleteAccount} color="primary" autoFocus="autoFocus">
             Confirm
           </Button>
         </DialogActions>

@@ -35,7 +35,7 @@ export default function DeleteProduct(props) {
     setOpen(false)
   }
     return (<span>
-      <IconButton aria-label="Delete" onClick={clickButton} color="secondary">
+      <IconButton aria-label="Delete" onClick={clickButton} color="primary">
         <DeleteIcon/>
       </IconButton>
       <Dialog open={open} onClose={handleRequestClose}>
@@ -49,7 +49,7 @@ export default function DeleteProduct(props) {
           <Button onClick={handleRequestClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={deleteProduct} color="secondary" autoFocus="autoFocus">
+          <Button onClick={deleteProduct} color="primary" autoFocus="autoFocus">
             Confirm
           </Button>
         </DialogActions>
