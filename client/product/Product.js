@@ -19,7 +19,11 @@ const useStyles = makeStyles(theme => ({
     margin: 30,
   },
   flex:{
-    display:'flex'
+    display:'flex',
+    [theme.breakpoints.up('desktop')]: {
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
   },
   card: {
     padding:'24px 40px 40px'
@@ -43,7 +47,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '24px',
     [theme.breakpoints.up('desktop')]: {
       width: 200,
-      marginLeft: '35%',
+      marginLeft: '0px',
     },
   },
   icon: {
